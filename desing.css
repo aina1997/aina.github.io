@@ -61,8 +61,11 @@ body, html {
 
 /*Footer*/
 footer{
-  color: rgb(30, 31, 33);;
-  height: 50px;
+  background-color: rgb(30, 31, 33);
+  color: white;
+  height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /*Contact me*/
@@ -75,5 +78,7 @@ footer{
 }
 
 @media only screen and (max-width: 600px){
-  margin-left: 0px;
+  .container{
+    margin-left: 0px;
+  }
 }
