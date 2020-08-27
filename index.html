@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="desing.css">
-
+  <link rel="stylesheet" href="btn.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -33,7 +34,7 @@
   <div class="hero-text">
     <h1>Aina Palacios</h1>
     <p>TELECOMMUNICATIONS ENGINEER</p>
-    <button class="btn btn-two"><span>Contact me</span></button>
+    <button id="goToContact" class="btn btn-two"><span>Contact me</span></button>
     <a href="CV Agost.pdf" download>
       <button class="btn btn-two">Download resume</button>
     </a>
@@ -46,10 +47,67 @@
   <div class="titleDiv">
   <p>Contact me<p>
   </div>
-  <div>
+  <div class="container">
+    <div class="row">
+       <div class="col-sm">
+    <button onclick="copyFunction(this)" class="btnB btn-twoB" id='mail'><span>ainapalacioscorral@gmail.com</span></button>
+</div> <div class="col-sm">
+
+<button onclick="copyFunction(this)" class="btnB btn-twoB" ><span>+34 615 473 091</span></button>
+</div>
+ <div class="col-sm">
+    <button class="btnB btn-twoB"><i class="fa fa-linkedin-square" style="font-size:xx-large"></i></button>
+    </div>
+  </div>
+  </div>
 </div>
 
-  </menu>
+
+
+
+
+
+
+
+
+
+
+<script>
+function copyFunction(element) {
+  var range, selection, worked;
+  var el = element.innerHTML;
+  console.log(el);
+    if (document.body.createTextRange) {
+      range = document.body.createTextRange();
+      range.moveToElementText(element);
+      range.select();
+    } else if (window.getSelection) {
+      selection = window.getSelection();
+      range = document.createRange();
+      range.selectNodeContents(element);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+
+    try {
+      document.execCommand('copy');
+      element.innerHTML = "Copied!";
+      setTimeout(function(){
+        element.innerHTML = el;
+      }, 2000);
+    }
+    catch (err) {
+      alert('unable to copy text');
+    }
+}
+
+$("#goToContact").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contactMe").offset().top
+    }, 2000);
+});
+</script>
+
 
 
 
