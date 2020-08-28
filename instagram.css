@@ -1,0 +1,43 @@
+#photos{
+        margin:0 auto;
+        position:relative;
+        height: 500px;
+}
+
+@media only screen and (max-width: 600px){
+      #photos{
+            padding-left: 15%;
+    margin-left: -60px;
+      }
+    #photos li{
+      width: 100%;
+    }
+}
+#photos li{
+  width: 100%;
+        position:absolute;
+        /*width:450px;*/
+        height:450px;
+        overflow:hidden;
+        background-color:#fff;
+        box-shadow: 1px 1px 1px #ccc;
+        z-index:10;
+
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        animation-duration: 1s;
+}
+
+#photos li a{
+        position:absolute;
+        top:6px;
+        left:6px;
+        right:6px;
+        bottom:6px;
+        background-size: contain;
+        text-indent:-9999px;
+        overflow:hidden;
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-position: center;
+}

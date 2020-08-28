@@ -23,11 +23,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+  <link rel="stylesheet" href="instagram.css">
   <link rel="stylesheet" href="desing.css">
   <link rel="stylesheet" href="btn.css">
   <link rel="stylesheet" href="time.css">
 
+  <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+  <script type="text/javascript" src="insta.js"></script>
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="path/to/instafeed.min.js"></script>
 
 </head>
 
@@ -45,9 +51,9 @@
   <div class="hero-text">
     <h1>Aina Palacios</h1>
     <p>TELECOMMUNICATIONS ENGINEER</p>
-    <button id="goToContact" class="btn btn-two"><span>Contact me</span></button>
+    <button id="goToContact" class="btn btn-two"><span style="font-size: large;">Contact me</span></button>
     <a href="CV Agost.pdf" download>
-      <button class="btn btn-two">Download resume</button>
+      <button class="btn btn-two" style="font-size: large;">Download resume</button>
     </a>
   </div>
 </div>
@@ -59,8 +65,84 @@
   <p>About me<p>
   </div>
   <div class="container">
+    I was born in Avinyó, Barcelona, in January 26, 1997.
+    Nowadays I live on the city of Barcelona and I combine university with my research scholarship at UPC.
+    I am also part of a festival organization, photographer and web developer of Telecoresca.
+  </div>
+  <div class="container">
+      <h3>Personal Interests</h3>
+      <div class='row'>
+        <div class='col-sm'>
+          <img src="Images/pets.png" height="300" alt="Animals lover">
+        </div>
+        <div class='col-sm' >
+          <img src="Images/museum.png"  height="300" alt="Art hobbist">
+        </div>
+        <div class='col-sm'>
+        <img src="Images/read.png" height="300" alt="Inveterate reader">
+        </div>
+        </div>
+
+    <h3>Telecogresca</h3>
+        <div class='row'>
+          <div class='col-sm'>
+            <img src="Images/teleco.png" alt="Telecogresca">
+          </div>
+        <div class='col-sm' style="margin-top: auto; margin-bottom: auto;" >
+          <p style="font-size: large;">
+            I am a volunteer at Telecogresca.
+          I'm in the sections of Multimedia and web.
+        </p>
+        </div>
+        </div>
+
+    <h3>Photography</h3>
+<div class=container style="height: inherit">
+    <ul id="photos">
+
+          <div id="instafeed">
+
+
+            </div>
+
+          <!-- More photos here -->
+    </ul>
+
+      <a href="#" class="arrow previous"><i class='fas fa-arrow-left' style='font-size:36px; color: black;'></i></a>
+      <a href="#" class="arrow next"><i class='fas fa-arrow-right' style='font-size:36px; color: black;'></i></a>
+
+      <!-- Libraries -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="assets/js/script.js"></script>
+</div>
+
+<script>
+var token = 'IGQVJWVE9hcFFqYTdoMGp4d1ZAjUmp4WEY4bkcxdW5VbHgzNkQ0WXJLaXJ6M3ZA5ZAV9KX3E2dlN1YndRb3oyaXRrU1dySUpFWkcwS01lNUMzeTQtSkF2T3dLYzQtRGFyOG5DODlISFhn';
+var userid = 17841405893396709;
+var client_id= 1067829083620088;
+
+var feed = new Instafeed({
+accessToken:'IGQVJWVE9hcFFqYTdoMGp4d1ZAjUmp4WEY4bkcxdW5VbHgzNkQ0WXJLaXJ6M3ZA5ZAV9KX3E2dlN1YndRb3oyaXRrU1dySUpFWkcwS01lNUMzeTQtSkF2T3dLYzQtRGFyOG5DODlISFhn',
+resolution: 'low_resolution',
+//template: '<li><img class="img-responsive" src="{{image}}" /></li>'
+template: '<li><a href="{{link}}" style="background-image:url({{image}})">Landscape 5</a>></li>'
+//template: '<div class="col-lg-3 col-sm-3 col-xs-4"><a href="{{link}}"><img class="img-responsive" src="{{image}}" /></a></div>',
+
+});
+feed.run();
+
+</script>
+
+  </div>
+
+
+  </div>
+
+
+
+  <div class="container" style="margin-top: inherit;">
     <a href="Self-Presentation.pdf" download>
-      <button class="btnB btn-twoB" id="btnCenter">Download self presentation slides</button>
+      <button class="btnB btn-twoB">Download self presentation slides</button>
     </a>
   </div>
 </div>

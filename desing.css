@@ -1,10 +1,16 @@
 body{
   font-family: "Times New Roman", Times, serif;
+  font-size: large;
 }
 
 body, html {
   height: 100%;
   margin: 0;
+  font-size: large;
+}
+
+img{
+  width: inherit;
 }
 
 .hero-image {
@@ -23,6 +29,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: large;
 }
 
 .infoDiv{
@@ -74,8 +81,15 @@ footer{
 }
 
 .container{
-  margin-left: -35px;
+    text-align: center;
 }
+
+@media (min-width: 600px){
+.container {
+     width: auto;
+}
+}
+
 
 @media only screen and (max-width: 600px){
   .container{
@@ -84,11 +98,11 @@ footer{
   }
 }
 
-#btnCenter{
-  left: 35%;
-}
-@media only screen and (max-width: 600px){
-  #btnCenter{
-    left: 0%;
-  }
+
+
+h3{
+  text-decoration-line: underline;
+  text-shadow: 2px 2px #e4e4e4;
+  margin-top: 40px;
+  margin-bottom: revert;
 }

@@ -1,0 +1,86 @@
+
+//A la url per tenir el code (tot menys #/)
+
+https://api.instagram.com/oauth/authorize
+?client_id=1067829083620088
+&redirect_uri=https://ainapalacios.ml/
+&scope=user_profile,user_media
+&response_type=code
+
+
+//Al mobaXterm
+
+curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+  -F client_id=1067829083620088 \
+  -F client_secret=4b44c451c3d5a2c5cf35ccadaaaa4e96 \
+  -F grant_type=authorization_code \
+  -F redirect_uri=https://ainapalacios.ml/ \
+  -F code=AQCRHT5e7K51pEoiEis7GJlAvuWzM9qxbqXshc4e2oKqCQUNCs31EZtabf9pIjYwQ3T3hFA8Vx10OBX93SJQ6I28_BUTPWzv_sjU4b0H4iv7a3OJjbSzqiuxHm9qJ9GY0TtoV9VJCGUx5PiVKS2nZCC4OyaMD-3hiUs4bCQqVv1i18SY7tZRcpZ9jBtcM9ZL7Q9VkFkVVPlP7IYrmJ404FwZULJVnwZzzrPE9rj5jymtag
+
+obtenim:
+
+
+{"access_token": "IGQVJXZAFlJNFo4YmxSUE0yZA2xHaGtDbXdQZAllEa3hZASEFISndxQlRDNEZAvcEt2UnY4bVdBS2lSUWtzWkdscFdSdVcyLVV3X1BveExJdW8zRnpFQVNZARXlNRl9ULVhoNUVuTXAxUjRnZAFcyS3cyUUZA3SmMwSFFoaXlVRHI4",
+"user_id": 17841405893396709}               ✔
+
+
+fem:
+
+curl -X GET \
+  'https://graph.instagram.com/17841405893396709?fields=id,username&access_token=IGQVJYLURrT2dmTzAtV3JXTnFQMGpuSF92LXhRc1lBZAE1haUFLTUhlLWE0U29ZARGhwYmtuR0M1Sm1jOWloTjhKYU5pdUtDVmlVM3U3REFTRmUxMDFJOS1XaXk1QXBjTDMyZAjVWYjNvOC1kQ003RVZAFUkh0am52VXRaNXZAR'
+
+obtenim:
+
+{"id":"17841405893396709","username":"lady.pitch"}
+
+
+
+
+{"access_token": "IGQVJVSGxxSEk1VG41NDBzemRDZATlHaFBlNVQxdzN4RlF5a2JZATFFIWnRUakdFbDNNZAVdRZAjhuaTliczhOWnpUZAE85dDl0eU42Q0dkdlBNcm5XbnhzekcwS2hqN3ZAIeHVoa2lza3NidUdmYVg5QVk5VnNaUV90MXJRZAGlF"
+, "user_id": 17841405893396709}
+
+
+curl -X GET \
+  https://graph.instagram.com/access_token
+  ?grant_type=ig_exchange_token
+  &client_secret=4b44c451c3d5a2c5cf35ccadaaaa4e96
+  &access_token=IGQVJYLURrT2dmTzAtV3JXTnFQMGpuSF92LXhRc1lBZAE1haUFLTUhlLWE0U29ZARGhwYmtuR0M1Sm1jOWloTjhKYU5pdUtDVmlVM3U3REFTRmUxMDFJOS1XaXk1QXBjTDMyZAjVWYjNvOC1kQ003RVZAFUkh0am52VXRaNXZAR
+
+  https://graph.instagram.com/access_token
+    ?grant_type=ig_exchange_token
+    &client_secret=4b44c451c3d5a2c5cf35ccadaaaa4e96
+    &access_token=IGQVJYLURrT2dmTzAtV3JXTnFQMGpuSF92LXhRc1lBZAE1haUFLTUhlLWE0U29ZARGhwYmtuR0M1Sm1jOWloTjhKYU5pdUtDVmlVM3U3REFTRmUxMDFJOS1XaXk1QXBjTDMyZAjVWYjNvOC1kQ003RVZAFUkh0am52VXRaNXZAR
+
+
+
+
+    {
+       "access_token": "IGQVJWQlpYVDIwcndUVTV1NGg0VmF4X29DMElITnhKTDNIYkowZA1VzdHZA0c1NYMEJXOXFjTnRlU01nc19sLTVhdmE0blpJMjFPTDE3elU3X3pyYWc3cDhCdmplV2pOaTVFS1A0YlhR",
+       "token_type": "bearer",
+       "expires_in": 5182385
+    }
+
+
+
+  https://graph.instagram.com/17841405893396709?fields=id,username&access_token=IGQVJYdWNKcDd5bnJ5RnlZAVy1kTGtwZAkVsMEtCNFZAxbGZAoY1RNZA01iVXk1ZA3NIaDZAKYjF3NmZA1ci1XbG9rRko3Vk81SUNhOEVJMTdqTm9NMm9MaGtxVFBQYkRpUHFKM0NJZAWs5SVF3'
+
+  https://graph.instagram.com/1067829083620088?fields=id,username&access_token=IGQVJYdWNKcDd5bnJ5RnlZAVy1kTGtwZAkVsMEtCNFZAxbGZAoY1RNZA01iVXk1ZA3NIaDZAKYjF3NmZA1ci1XbG9rRko3Vk81SUNhOEVJMTdqTm9NMm9MaGtxVFBQYkRpUHFKM0NJZAWs5SVF3'
+
+
+  {
+     "id": "17841405893396709",
+     "username": "lady.pitch"
+  }
+
+
+  https://graph.instagram.com/17841405893396709?fields=id,username&access_token=https://graph.instagram.com/17841405893396709?fields=id,username&access_token=IGQVJYLURrT2dmTzAtV3JXTnFQMGpuSF92LXhRc1lBZAE1haUFLTUhlLWE0U29ZARGhwYmtuR0M1Sm1jOWloTjhKYU5pdUtDVmlVM3U3REFTRmUxMDFJOS1XaXk1QXBjTDMyZAjVWYjNvOC1kQ003RVZAFUkh0am52VXRaNXZAR
+
+
+
+
+  {
+     "access_token": "IGQVJVd3BkWWNqcGthdGR4dmdZAdnp3NDBEN0xCc2JJUTI4NU5SZAnNKZAUxucE93WjNDcW1wVmVFQnVDLVdWVEc0UFBVWk9FTVdEV3ZARUmU2N2pEQVBlV1lKQ0dZAc3FOd0pJQTFmMzNn",
+     "token_type": "bearer",
+     "expires_in": 5180856
+  }
