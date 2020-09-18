@@ -32,6 +32,7 @@ var aboutMe = `
           <p style="font-size: large;">
             I am a volunteer at Telecogresca.
           I'm in the sections of Multimedia and web.
+          Now I am editing a webpage with Django.
         </p>
         </div>
         </div>
